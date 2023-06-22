@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-22T22:54:13 IST" name="Default suite" finished-at="2023-06-22T22:54:24 IST" duration-ms="11100">
+    <groups>
+    </groups>
+    <test started-at="2023-06-22T22:54:13 IST" name="Default test" finished-at="2023-06-22T22:54:24 IST" duration-ms="11100">
+      <class name="com.QALegendBilling.testscript.UserTest">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.QALegendBilling.testscript.UserTest@4efc180e]" started-at="2023-06-22T22:54:13 IST" name="setExtent" finished-at="2023-06-22T22:54:13 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4b391e45]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.UserTest@4efc180e]" started-at="2023-06-22T22:54:14 IST" name="setUP" finished-at="2023-06-22T22:54:21 IST" duration-ms="6911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_007_verifyInvalidUserSearch(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@4efc180e]" started-at="2023-06-22T22:54:21 IST" name="TC_007_verifyInvalidUserSearch" data-provider="ValidUserCredentials" finished-at="2023-06-22T22:54:24 IST" duration-ms="3574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_verifyInvalidUserSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.UserTest@4efc180e]" started-at="2023-06-22T22:54:24 IST" name="tearDown" finished-at="2023-06-22T22:54:24 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_007_verifyInvalidUserSearch status=SUCCESS method=UserTest.TC_007_verifyInvalidUserSearch(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@4efc180e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.UserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

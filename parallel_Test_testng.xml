@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Testing" parallel="tests">
+	<listeners>
+		<listener class-name="com.demowebshop.listeners.TestListener" />
+	</listeners>
+	<test thread-count="2" name="Chrome Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.QALegendBilling.testscript.ResetTest">
+				<methods>
+					<include name="TC_003_verifyForgotPassword"></include>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test thread-count="2" name="FireFox Test">
+		<parameter name="browser" value="FireFox" />
+		<classes>
+			<class name="com.QALegendBilling.testscript.Hometest">
+				<methods>
+					<include name="TC_005_verifUserManagementDropdown"></include>
+
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.Logintest">
+				<methods>
+					<include name="TC_001_verifyUserLoginWithValidCredentials"></include>
+					<include name="TC_002_verifyUserLoginWithInvalidCredentials"></include>
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.UserTest">
+				<methods>
+					<include name="TC_006_verifyAddUser"></include>
+					<include name="TC_007_verifyInvalidUserSearch"></include>
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.SignoutTest">
+				<methods>
+					<include name="TC_004_verifySignout"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
