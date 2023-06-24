@@ -82,6 +82,10 @@ public class UserTest extends Base
 		//String actinvlaidMsg=user.getInvalidUserMessage();
 		List<ArrayList<String>> data1 = ExcelUtility.excelDataReader("UserPageData");
 		String expMsg=data1.get(2).get(0);
+		System.out.println(expMsg);
 		//Assert.assertEquals(actinvlaidMsg, expMsg, ErrorMessages.INVALID_USER_MESSAGE_NOT_FOUND);
+		//td[@class='dataTables_empty']
+		String actMsg=user.getInvalidSearchText();
+		Assert.assertEquals(actMsg, expMsg, ErrorMessages.INVALID_USER_MESSAGE_NOT_FOUND);
 	}
 }

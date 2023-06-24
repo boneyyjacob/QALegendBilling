@@ -32,7 +32,12 @@ public class Hometest extends Base {
 		home.clickEndTourButton();
 		Assert.assertEquals(actUsername, ExpUserLoginName,ErrorMessages.INVALID_LOGIN_MESSAGE);
 		home.clickuserManagementDropdownbutton();
-		
+		boolean userMenuStatus=home.userMenuIsDisplayed();
+		Assert.assertTrue(userMenuStatus,ErrorMessages.INVALID_ERROR_MESSAGE_FOUND);
+		boolean rolesMenuStatus=home.rolesMenuIsDisplayed();
+		Assert.assertTrue(rolesMenuStatus,ErrorMessages.INVALID_ERROR_MESSAGE_FOUND);
+		boolean salesCommissionStatus=home.salesCommissionMenuIsDisplayed();
+		Assert.assertTrue(salesCommissionStatus,ErrorMessages.INVALID_ERROR_MESSAGE_FOUND);
 	}
 	
 }

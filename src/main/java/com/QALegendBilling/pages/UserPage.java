@@ -59,10 +59,11 @@ public class UserPage extends TestHelperUtility
 	private final String _searchUserField = "//input[@class='form-control input-sm']";
 	@FindBy(xpath = _searchUserField)
 	private WebElement searchUserField;
+
 	
-	private final String _invalidUserMessage = "//td[@class='dataTables_empty']";
-	@FindBy(xpath = _invalidUserMessage)
-	private WebElement invalidUserMessage;
+	private final String _invalidSearchText = "//td[@class='dataTables_empty']";
+	@FindBy(xpath = _invalidSearchText)
+	private WebElement invalidSearchText;
 	
 	
 	String fname=random.getfName();
@@ -131,12 +132,15 @@ public class UserPage extends TestHelperUtility
 		String invaliduserfname=random.getfName();
 		String invaliduserlname=random.getlName();
 		page.enterText(searchUserField, invaliduserfname+invaliduserlname);
+		wait.waitForElementToBeVisible(driver, invalidSearchText);
 		
 	}
-	public String getInvalidUserMessage()
+	
+	public String getInvalidSearchText()
 	{
-		String msg=invalidUserMessage.getText();
-		return msg;
+		String invalidtext=invalidSearchText.getText();
+		return invalidtext;
+		
 	}
 	
 
