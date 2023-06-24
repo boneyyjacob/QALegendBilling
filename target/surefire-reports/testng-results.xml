@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-24T06:55:23 IST" name="Surefire suite" finished-at="2023-06-24T06:56:08 IST" duration-ms="44204">
+    <groups>
+    </groups>
+    <test started-at="2023-06-24T06:55:23 IST" name="Surefire test" finished-at="2023-06-24T06:56:08 IST" duration-ms="44204">
+      <class name="com.QALegendBilling.testscript.SignoutTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@5c671d7f]" started-at="2023-06-24T06:55:31 IST" name="setUP" finished-at="2023-06-24T06:55:37 IST" duration-ms="6113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_004_verifySignout(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@5c671d7f]" started-at="2023-06-24T06:55:37 IST" name="TC_004_verifySignout" data-provider="ValidUserCredentials" finished-at="2023-06-24T06:55:41 IST" duration-ms="3128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_verifySignout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@5c671d7f]" started-at="2023-06-24T06:55:41 IST" name="tearDown" finished-at="2023-06-24T06:55:41 IST" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_verifySignout status=SUCCESS method=SignoutTest.TC_004_verifySignout(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@5c671d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.SignoutTest -->
+      <class name="com.QALegendBilling.listeners.TestListener">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.QALegendBilling.listeners.TestListener@33c911a1]" started-at="2023-06-24T06:55:23 IST" name="setExtent" finished-at="2023-06-24T06:55:23 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@79893462]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+      </class> <!-- com.QALegendBilling.listeners.TestListener -->
+      <class name="com.QALegendBilling.testscript.ResetTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.ResetTest@49e5f737]" started-at="2023-06-24T06:55:23 IST" name="setUP" finished-at="2023-06-24T06:55:29 IST" duration-ms="5863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_003_verifyForgotPassword()[pri:0, instance:com.QALegendBilling.testscript.ResetTest@49e5f737]" started-at="2023-06-24T06:55:29 IST" name="TC_003_verifyForgotPassword" finished-at="2023-06-24T06:55:31 IST" duration-ms="1642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_verifyForgotPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.ResetTest@49e5f737]" started-at="2023-06-24T06:55:31 IST" name="tearDown" finished-at="2023-06-24T06:55:31 IST" duration-ms="318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_003_verifyForgotPassword status=SUCCESS method=ResetTest.TC_003_verifyForgotPassword()[pri:0, instance:com.QALegendBilling.testscript.ResetTest@49e5f737] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.ResetTest -->
+      <class name="com.QALegendBilling.testscript.UserTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:55:41 IST" name="setUP" finished-at="2023-06-24T06:55:47 IST" duration-ms="6195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_006_verifyAddUser(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:55:47 IST" name="TC_006_verifyAddUser" data-provider="ValidUserCredentials" finished-at="2023-06-24T06:55:56 IST" duration-ms="9161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_verifyAddUser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:55:56 IST" name="tearDown" finished-at="2023-06-24T06:55:57 IST" duration-ms="266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_006_verifyAddUser status=SUCCESS method=UserTest.TC_006_verifyAddUser(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:55:57 IST" name="setUP" finished-at="2023-06-24T06:56:02 IST" duration-ms="5249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_007_verifyInvalidUserSearch(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:56:02 IST" name="TC_007_verifyInvalidUserSearch" data-provider="ValidUserCredentials" finished-at="2023-06-24T06:56:07 IST" duration-ms="5464" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_verifyInvalidUserSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc]" started-at="2023-06-24T06:56:07 IST" name="tearDown" finished-at="2023-06-24T06:56:08 IST" duration-ms="373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_007_verifyInvalidUserSearch status=SUCCESS method=UserTest.TC_007_verifyInvalidUserSearch(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.UserTest@757277dc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.UserTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

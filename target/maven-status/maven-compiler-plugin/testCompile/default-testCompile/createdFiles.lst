@@ -1,0 +1,9 @@
+com\QALegendBilling\testscript\Logintest.class
+com\QALegendBilling\dataprovider\DataProviders.class
+com\QALegendBilling\testscript\Hometest.class
+com\QALegendBilling\testscript\ResetTest.class
+com\QALegendBilling\testscript\SignoutTest.class
+com\QALegendBilling\automationcore\DriverFactory.class
+com\QALegendBilling\automationcore\Base.class
+com\QALegendBilling\testscript\UserTest.class
+com\QALegendBilling\listeners\TestListener.class

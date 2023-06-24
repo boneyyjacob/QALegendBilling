@@ -63,7 +63,7 @@ public class Base {
 			File screenshot = takeScreenshot.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshot, new File("./Screenshots/" + result.getName() + ".png"));
 		}
-		//driver.quit();
+		driver.quit();
 	}
 
 	@BeforeSuite
