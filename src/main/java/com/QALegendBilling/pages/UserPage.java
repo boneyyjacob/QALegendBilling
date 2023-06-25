@@ -65,9 +65,22 @@ public class UserPage extends TestHelperUtility
 	@FindBy(xpath = _invalidSearchText)
 	private WebElement invalidSearchText;
 	
+	private final String _userEmailID = "//table[@id=\"users_table\"]//tbody//tr//td[4]";
+	@FindBy(xpath = _userEmailID)
+	private WebElement userEmailID;
 	
-	String fname=random.getfName();
-	String lname=random.getlName();
+	private final String _userProfileButton = "//a[@class='dropdown-toggle']";
+	@FindBy(xpath = _userProfileButton)
+	private WebElement userProfileButton;
+	
+	private final String _userLogoutButton = "//div[@class='pull-right']//a[@class='btn btn-default btn-flat']";
+	@FindBy(xpath = _userLogoutButton)
+	private WebElement userLogoutButton;
+	
+	
+	
+	public String fname=random.getfName();
+	public String lname=random.getlName();
 	public String email=random.getRandomEmail();
 	
 	
@@ -143,5 +156,35 @@ public class UserPage extends TestHelperUtility
 		
 	}
 	
+	public String getEmailID()
+	{
+		String uemail=userEmailID.getText();
+		return uemail;
+	}
+	
+	public String newLoginUserName()
+	{
+		return fname+lname;
+	}
+	
+	public String newLoginUserPword()
+	{
+		return fname+123;
+	}
+	
+	public String newLoginName()
+	{
+		return fname+" "+lname;
+	}
+	
+	public void userProfileclick()
+	{
+		userProfileButton.click();
+	}
+	
+	public void userProfileLogout()
+	{
+		userLogoutButton.click();
+	}
 
 }

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.QALegendBilling.testscript.UserTest">
+      <class name="com.QALegendBilling.testscript.SalesCommissionAgentsTest">
         <methods>
           <include name="tearDown"/>
           <include name="setExtent"/>
-          <include name="TC_007_verifyInvalidUserSearch" invocation-numbers="0"/>
+          <include name="TC_010_verifyAddSCM" invocation-numbers="0"/>
           <include name="setUP"/>
         </methods>
-      </class> <!-- com.QALegendBilling.testscript.UserTest -->
+      </class> <!-- com.QALegendBilling.testscript.SalesCommissionAgentsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

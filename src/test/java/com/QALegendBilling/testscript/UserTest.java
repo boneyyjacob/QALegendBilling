@@ -62,6 +62,8 @@ public class UserTest extends Base
 		user.searchUser();
 		String ExpUseremail=user.email;
 		System.out.println(ExpUseremail);	
+		String actemail=user.getEmailID();
+		Assert.assertEquals(actemail, ExpUseremail,ErrorMessages.USER_NOT_FOUND_MESSAGE);
 	}
 	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
 	public void TC_007_verifyInvalidUserSearch(String username, String Password)
@@ -87,5 +89,48 @@ public class UserTest extends Base
 		//td[@class='dataTables_empty']
 		String actMsg=user.getInvalidSearchText();
 		Assert.assertEquals(actMsg, expMsg, ErrorMessages.INVALID_USER_MESSAGE_NOT_FOUND);
+	}
+	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+	public void TC_008_verifyNewlyAddedUserLogin(String username, String Password) throws InterruptedException
+	{
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+		String ExpUserLoginName = data.get(1).get(2);
+		String Exptitle = data.get(1).get(4);
+		login = new LoginPage(driver);
+		login.enterUserCredentials(username, Password);
+		home = login.clickOnLoginButton();
+		String actUsername = home.getLoginUserName();
+		home.clickEndTourButton();
+		Assert.assertEquals(actUsername, ExpUserLoginName,ErrorMessages.INVALID_LOGIN_MESSAGE);
+		home.clickuserManagementDropdownbutton();
+		home.clickUserButton();
+		user = new UserPage(driver);
+		user.clickUserAddButton();
+		user.enterTitle(Exptitle);
+		user.enterFirstName();
+		user.enterLastName();
+		user.enterUserEmail();
+		user.enterUserName();
+		user.enterUserPassword();
+		user.enterConfirmPassword();
+		List<ArrayList<String>> data1 = ExcelUtility.excelDataReader("UserPageData");
+		String prefix=data1.get(0).get(0);
+		String salesCom=data1.get(1).get(0);
+		user.enterTitle(prefix);
+		user.enterCommission(salesCom);
+		user.clickSaveButton();
+		
+		Thread.sleep(15000);
+		user.userProfileclick();
+		user.userProfileLogout();
+		
+		String newUname=user.newLoginUserName();
+		String newPWord=user.newLoginUserPword();
+		login.enterUserCredentials(newUname, newPWord);
+		login.clickOnLoginButton();
+		String actNewUsername=home.getLoginUserName();
+		String ExpNewUsername=user.newLoginName();
+		Assert.assertEquals(actNewUsername, ExpNewUsername,com.QALegendBilling.constants.ErrorMessages.INVALID_LOGIN_MESSAGE);
+	
 	}
 }

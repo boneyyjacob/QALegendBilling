@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Parallel Testing" parallel="tests">
 	<listeners>
-		<listener class-name="com.demowebshop.listeners.TestListener" />
+		<listener class-name="com.QALegendBilling.listeners.TestListener" />
 	</listeners>
 	<test thread-count="2" name="Chrome Test">
 		<parameter name="browser" value="chrome" />
