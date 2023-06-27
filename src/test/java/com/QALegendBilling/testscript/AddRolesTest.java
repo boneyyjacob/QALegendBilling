@@ -28,7 +28,7 @@ public class AddRolesTest extends Base
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
 
-@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+@Test(priority=1,enabled=true,description="TC_009_verifyAddRoles", groups={"Regression"}, dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
 public void TC_009_verifyAddRoles(String username, String Password)
 {
 	List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
@@ -47,5 +47,27 @@ public void TC_009_verifyAddRoles(String username, String Password)
 	String actsearchresult=addroles.getSearchResults();
 	System.out.println(userrole);
 	Assert.assertEquals(actsearchresult, userrole, ErrorMessages.ROLES_NOT_FOUND_MESSAGE);
+}
+@Test(priority=1,enabled=true,description="TC_010_verifyEditRoles", groups={"Regression"},dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+public void TC_010_verifyEditRoles(String username, String Password)
+{
+	List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+	login = new LoginPage(driver);
+	login.enterUserCredentials(username, Password);
+	home = login.clickOnLoginButton();
+	home.clickEndTourButton();
+	home.clickuserManagementDropdownbutton();
+	addroles=new AddRolesPage(driver);
+	addroles.clickRolesDropdown();
+	addroles.clickAddRoles();
+	String userrole=addroles.random.getfName();
+	addroles.enterRoleName(userrole);
+	addroles.clickSaveRoles();
+	addroles.searchRole(userrole);
+	addroles.editRoles();
+	String actrolesheader=addroles.getRolesheader();
+	List<ArrayList<String>> data1=ExcelUtility.excelDataReader("Roles");
+	String expRolesheader=data1.get(0).get(0);
+	Assert.assertEquals(actrolesheader, expRolesheader, ErrorMessages.ROLES_HEADER_NOT_FOUND_MESSAGE);
 }
 }

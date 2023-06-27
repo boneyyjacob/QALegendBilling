@@ -40,6 +40,14 @@ private final String _rolesSearchResult = "//td[@class='sorting_1']";
 @FindBy(xpath = _rolesSearchResult)
 private WebElement rolesSearchResult; 
 
+private final String _rolesEditButton = "//a[@class='btn btn-xs btn-primary']";
+@FindBy(xpath = _rolesEditButton)
+private WebElement rolesEditButton; 
+
+private final String _rolesHeader = "//section[@class='content-header']";
+@FindBy(xpath = _rolesHeader)
+private WebElement rolesHeader; 
+
 public void clickRolesDropdown()
 {
 	RolesDropdown.click();
@@ -66,10 +74,14 @@ public String getSearchResults()
 	String searchResult=page.getElementText(rolesSearchResult);
 	return searchResult;
 }
-
-
-
-
-
+public void editRoles()
+{
+	rolesEditButton.click();
+}
+public String getRolesheader()
+{
+	String header=page.getElementText(rolesHeader);
+	return header;
+}
 
 }

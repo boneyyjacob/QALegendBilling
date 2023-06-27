@@ -23,7 +23,7 @@ public class Logintest extends Base
 	LoginPage login;
 	HomePage home;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
-	@Test
+	@Test(priority=1,enabled=true,description="TC_001_verifyUserLoginWithValidCredentials", groups={"Smoke"})
 	public void TC_001_verifyUserLoginWithValidCredentials()
 	{
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
@@ -36,7 +36,7 @@ public class Logintest extends Base
 		String actUsername=home.getLoginUserName();
 		Assert.assertEquals(actUsername, ExpUserLoginName,com.QALegendBilling.constants.ErrorMessages.INVALID_LOGIN_MESSAGE);
 	}
-	@Test(dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
+	@Test(priority=1,enabled=true,description="TC_002_verifyUserLoginWithInvalidCredentials", groups={"Smoke"}, dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
 	public void TC_002_verifyUserLoginWithInvalidCredentials(String userName,String userPassword)
 	{
 		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");

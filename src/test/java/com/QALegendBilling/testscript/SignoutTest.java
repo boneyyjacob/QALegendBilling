@@ -21,7 +21,7 @@ public class SignoutTest extends Base
 	
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
-	@Test(dataProvider="ValidUserCredentials",dataProviderClass=DataProviders.class)
+	@Test(priority=1,enabled=true,description="TC_004_verifySignout", groups={"Regression"}, dataProvider="ValidUserCredentials",dataProviderClass=DataProviders.class)
 	public void TC_004_verifySignout(String username, String Password)
 	{
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");

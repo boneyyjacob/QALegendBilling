@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-25T18:54:13 IST" name="Default suite" finished-at="2023-06-25T18:54:25 IST" duration-ms="12556">
+  <suite started-at="2023-06-27T02:24:10 IST" name="Suite" finished-at="2023-06-27T02:26:02 IST" duration-ms="111641">
     <groups>
+      <group name="Regression">
+        <method signature="AddRolesTest.TC_009_verifyAddRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" name="TC_009_verifyAddRoles" class="com.QALegendBilling.testscript.AddRolesTest"/>
+        <method signature="AddRolesTest.TC_010_verifyEditRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" name="TC_010_verifyEditRoles" class="com.QALegendBilling.testscript.AddRolesTest"/>
+        <method signature="ResetTest.TC_003_verifyForgotPassword()[pri:1, instance:com.QALegendBilling.testscript.ResetTest@47faa49c]" name="TC_003_verifyForgotPassword" class="com.QALegendBilling.testscript.ResetTest"/>
+        <method signature="SignoutTest.TC_004_verifySignout(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.SignoutTest@28f2a10f]" name="TC_004_verifySignout" class="com.QALegendBilling.testscript.SignoutTest"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="Hometest.TC_005_verifUserManagementDropdown(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Hometest@73700b80]" name="TC_005_verifUserManagementDropdown" class="com.QALegendBilling.testscript.Hometest"/>
+        <method signature="Logintest.TC_001_verifyUserLoginWithValidCredentials()[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" name="TC_001_verifyUserLoginWithValidCredentials" class="com.QALegendBilling.testscript.Logintest"/>
+        <method signature="Logintest.TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" name="TC_002_verifyUserLoginWithInvalidCredentials" class="com.QALegendBilling.testscript.Logintest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-06-25T18:54:13 IST" name="Default test" finished-at="2023-06-25T18:54:25 IST" duration-ms="12556">
-      <class name="com.QALegendBilling.testscript.SalesCommissionAgentsTest">
-        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.QALegendBilling.testscript.SalesCommissionAgentsTest@4efc180e]" started-at="2023-06-25T18:54:13 IST" name="setExtent" finished-at="2023-06-25T18:54:13 IST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3c91530d]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.SalesCommissionAgentsTest@4efc180e]" started-at="2023-06-25T18:54:13 IST" name="setUP" finished-at="2023-06-25T18:54:21 IST" duration-ms="7716" status="PASS">
+    <test started-at="2023-06-27T02:24:10 IST" name="Parameter testing-Grouping" finished-at="2023-06-27T02:26:02 IST" duration-ms="111641">
+      <class name="com.QALegendBilling.testscript.SignoutTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@28f2a10f]" started-at="2023-06-27T02:25:09 IST" name="setUP" finished-at="2023-06-27T02:25:19 IST" duration-ms="9720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC_010_verifyAddSCM(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.SalesCommissionAgentsTest@4efc180e]" started-at="2023-06-25T18:54:21 IST" name="TC_010_verifyAddSCM" data-provider="ValidUserCredentials" finished-at="2023-06-25T18:54:25 IST" duration-ms="4019" status="FAIL">
+        <test-method signature="TC_004_verifySignout(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.SignoutTest@28f2a10f]" started-at="2023-06-27T02:25:19 IST" name="TC_004_verifySignout" description="TC_004_verifySignout" data-provider="ValidUserCredentials" finished-at="2023-06-27T02:25:23 IST" duration-ms="4023" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,88 +35,253 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoAlertPresentException">
-            <message>
-              <![CDATA[no such alert
-  (Session info: chrome=114.0.5735.134)
-Build info: version: '4.7.0', revision: '0a5b49d16f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6cb01a70afddfc4f01b066d7e68fe661, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49808/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6cb01a70afddfc4f01b066d7e68fe661]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=114.0.5735.134)
-Build info: version: '4.7.0', revision: '0a5b49d16f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6cb01a70afddfc4f01b066d7e68fe661, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49808/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6cb01a70afddfc4f01b066d7e68fe661
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1078)
-at com.QALegendBilling.testscript.SalesCommissionAgentsTest.TC_010_verifyAddSCM(SalesCommissionAgentsTest.java:44)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_010_verifyAddSCM -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.SalesCommissionAgentsTest@4efc180e]" started-at="2023-06-25T18:54:25 IST" name="tearDown" finished-at="2023-06-25T18:54:25 IST" duration-ms="173" status="PASS">
+        </test-method> <!-- TC_004_verifySignout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.SignoutTest@28f2a10f]" started-at="2023-06-27T02:25:23 IST" name="tearDown" finished-at="2023-06-27T02:25:23 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_010_verifyAddSCM status=FAILURE method=SalesCommissionAgentsTest.TC_010_verifyAddSCM(java.lang.String,java.lang.String)[pri:0, instance:com.QALegendBilling.testscript.SalesCommissionAgentsTest@4efc180e] output={null}]]]>
+                <![CDATA[[TestResult name=TC_004_verifySignout status=SUCCESS method=SignoutTest.TC_004_verifySignout(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.SignoutTest@28f2a10f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.QALegendBilling.testscript.SalesCommissionAgentsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.QALegendBilling.testscript.SignoutTest -->
+      <class name="com.QALegendBilling.testscript.Hometest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.Hometest@73700b80]" started-at="2023-06-27T02:24:11 IST" name="setUP" finished-at="2023-06-27T02:24:19 IST" duration-ms="8622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_005_verifUserManagementDropdown(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Hometest@73700b80]" started-at="2023-06-27T02:24:19 IST" name="TC_005_verifUserManagementDropdown" description="TC_005_verifUserManagementDropdown" data-provider="ValidUserCredentials" finished-at="2023-06-27T02:24:22 IST" duration-ms="3180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_verifUserManagementDropdown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.Hometest@73700b80]" started-at="2023-06-27T02:24:22 IST" name="tearDown" finished-at="2023-06-27T02:24:22 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_005_verifUserManagementDropdown status=SUCCESS method=Hometest.TC_005_verifUserManagementDropdown(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Hometest@73700b80] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.Hometest -->
+      <class name="com.QALegendBilling.testscript.Logintest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:22 IST" name="setUP" finished-at="2023-06-27T02:24:30 IST" duration-ms="7677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_001_verifyUserLoginWithValidCredentials()[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:30 IST" name="TC_001_verifyUserLoginWithValidCredentials" description="TC_001_verifyUserLoginWithValidCredentials" finished-at="2023-06-27T02:24:33 IST" duration-ms="3317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_verifyUserLoginWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:33 IST" name="tearDown" finished-at="2023-06-27T02:24:33 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_001_verifyUserLoginWithValidCredentials status=SUCCESS method=Logintest.TC_001_verifyUserLoginWithValidCredentials()[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:34 IST" name="setUP" finished-at="2023-06-27T02:24:39 IST" duration-ms="5887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:39 IST" name="TC_002_verifyUserLoginWithInvalidCredentials" description="TC_002_verifyUserLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2023-06-27T02:24:41 IST" duration-ms="1128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boney.jacob@gsmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[qwerty]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_verifyUserLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:41 IST" name="tearDown" finished-at="2023-06-27T02:24:41 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_002_verifyUserLoginWithInvalidCredentials status=SUCCESS method=Logintest.TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:41 IST" name="setUP" finished-at="2023-06-27T02:24:50 IST" duration-ms="8945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:50 IST" name="TC_002_verifyUserLoginWithInvalidCredentials" description="TC_002_verifyUserLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2023-06-27T02:24:51 IST" duration-ms="1128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[j.doe31@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdoepw]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_verifyUserLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:51 IST" name="setUP" finished-at="2023-06-27T02:25:01 IST" duration-ms="10069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:24:51 IST" name="tearDown" finished-at="2023-06-27T02:24:51 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_002_verifyUserLoginWithInvalidCredentials status=SUCCESS method=Logintest.TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:25:01 IST" name="TC_002_verifyUserLoginWithInvalidCredentials" description="TC_002_verifyUserLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2023-06-27T02:25:02 IST" duration-ms="1024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[j.doe3@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdoepw1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_verifyUserLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.Logintest@73e22a3d]" started-at="2023-06-27T02:25:02 IST" name="tearDown" finished-at="2023-06-27T02:25:02 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_002_verifyUserLoginWithInvalidCredentials status=SUCCESS method=Logintest.TC_002_verifyUserLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.Logintest@73e22a3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.Logintest -->
+      <class name="com.QALegendBilling.testscript.AddRolesTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:25:23 IST" name="setUP" finished-at="2023-06-27T02:25:30 IST" duration-ms="7014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_009_verifyAddRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:25:30 IST" name="TC_009_verifyAddRoles" description="TC_009_verifyAddRoles" data-provider="ValidUserCredentials" finished-at="2023-06-27T02:25:40 IST" duration-ms="10440" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_verifyAddRoles -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:25:40 IST" name="tearDown" finished-at="2023-06-27T02:25:40 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_009_verifyAddRoles status=SUCCESS method=AddRolesTest.TC_009_verifyAddRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:25:40 IST" name="setUP" finished-at="2023-06-27T02:25:49 IST" duration-ms="8895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_010_verifyEditRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:25:49 IST" name="TC_010_verifyEditRoles" description="TC_010_verifyEditRoles" data-provider="ValidUserCredentials" finished-at="2023-06-27T02:26:01 IST" duration-ms="12144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boneyj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Accenture@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_verifyEditRoles -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.AddRolesTest@f736069]" started-at="2023-06-27T02:26:02 IST" name="tearDown" finished-at="2023-06-27T02:26:02 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_010_verifyEditRoles status=SUCCESS method=AddRolesTest.TC_010_verifyEditRoles(java.lang.String,java.lang.String)[pri:1, instance:com.QALegendBilling.testscript.AddRolesTest@f736069] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.AddRolesTest -->
+      <class name="com.QALegendBilling.testscript.ResetTest">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.ResetTest@47faa49c]" started-at="2023-06-27T02:25:02 IST" name="setUP" finished-at="2023-06-27T02:25:07 IST" duration-ms="5268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_003_verifyForgotPassword()[pri:1, instance:com.QALegendBilling.testscript.ResetTest@47faa49c]" started-at="2023-06-27T02:25:07 IST" name="TC_003_verifyForgotPassword" description="TC_003_verifyForgotPassword" finished-at="2023-06-27T02:25:09 IST" duration-ms="1973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_verifyForgotPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.ResetTest@47faa49c]" started-at="2023-06-27T02:25:09 IST" name="tearDown" finished-at="2023-06-27T02:25:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_003_verifyForgotPassword status=SUCCESS method=ResetTest.TC_003_verifyForgotPassword()[pri:1, instance:com.QALegendBilling.testscript.ResetTest@47faa49c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.ResetTest -->
+    </test> <!-- Parameter testing-Grouping -->
+  </suite> <!-- Suite -->
 </testng-results>

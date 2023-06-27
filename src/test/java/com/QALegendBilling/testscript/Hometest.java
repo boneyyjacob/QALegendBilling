@@ -20,7 +20,7 @@ public class Hometest extends Base {
 	LoginPage login;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 
-	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+	@Test(priority=1,enabled=true,description="TC_005_verifUserManagementDropdown", groups={"Smoke"}, dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
 	public void TC_005_verifUserManagementDropdown(String username, String Password) {
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String ExpUserLoginName = data.get(1).get(2);

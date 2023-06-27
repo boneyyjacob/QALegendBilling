@@ -30,7 +30,7 @@ public class SalesCommissionAgentsTest extends Base
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	
 	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
-	public void TC_010_verifyAddSCM(String username, String Password)
+	public void TC_011_verifyAddSCM(String username, String Password)
 	{
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		login = new LoginPage(driver);

@@ -20,7 +20,7 @@ public class ResetTest extends Base
 	LoginPage login;
 	ResetPage reset;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
-	@Test
+	@Test(priority=1,enabled=true,description="TC_003_verifyForgotPassword", groups={"Regression"})
 	public void TC_003_verifyForgotPassword()
 	{
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("ResetPage");

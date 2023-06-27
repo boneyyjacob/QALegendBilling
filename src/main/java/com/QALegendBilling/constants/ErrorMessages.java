@@ -11,4 +11,5 @@ public class ErrorMessages
 	public static final String USER_NOT_FOUND_MESSAGE="Error : User not found";
 	public static final String ROLES_NOT_FOUND_MESSAGE="Error : Role not found";
 	public static final String SALES_AGENT_NOT_FOUND_MESSAGE="Error : Sales agent not found";
+	public static final String ROLES_HEADER_NOT_FOUND_MESSAGE="Error : Roles header not found";
 }
