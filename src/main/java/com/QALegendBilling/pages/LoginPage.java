@@ -30,7 +30,6 @@ public class LoginPage extends TestHelperUtility {
 	private final String _clickForgotPasswordLink = "//a[@class='btn btn-link']";
 	@FindBy(xpath = _clickForgotPasswordLink)
 	private WebElement clickForgotPasswordLink;
-	
 
 	public void enterUserCredentials(String email, String pword) {
 		page.enterText(userNameField, email);
@@ -46,16 +45,14 @@ public class LoginPage extends TestHelperUtility {
 		String errorMessage = page.getElementText(loginErrorMessage);
 		return errorMessage;
 	}
-	
-	public ResetPage clickForgotPassword()
-	{
+
+	public ResetPage clickForgotPassword() {
 		clickForgotPasswordLink.click();
 		return new ResetPage(driver);
 	}
-	
-	public String getTitleLoginPage()
-	{
-		String title=driver.getTitle();
+
+	public String getTitleLoginPage() {
+		String title = driver.getTitle();
 		return title;
 	}
 

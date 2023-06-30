@@ -7,9 +7,13 @@
 	<test thread-count="5" name="Functional Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.QALegendBilling.testscript.ResetTest"/>
-			<class name="com.QALegendBilling.testscript.SignoutTest"/>
-			
+			<!--<class name="com.QALegendBilling.testscript.ResetTest"/>-->
+			<!--<class name="com.QALegendBilling.testscript.SignoutTest"/>-->
+			<class name="com.QALegendBilling.testscript.Hometest">
+			<methods>
+			<include name="TC_005_verifUserManagementDropdown"></include>
+			</methods>
+			</class>
 		</classes>
 	</test> <!--
 	Test -->

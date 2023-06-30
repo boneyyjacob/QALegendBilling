@@ -15,25 +15,22 @@ import com.QALegendBilling.utilities.ExcelUtility;
 import com.QALegendBilling.utilities.RandomUtility;
 import com.aventstack.extentreports.ExtentTest;
 
-public class ResetTest extends Base 
-{
+public class ResetTest extends Base {
 	LoginPage login;
 	ResetPage reset;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
-	@Test(priority=1,enabled=true,description="TC_003_verifyForgotPassword", groups={"Regression"})
-	public void TC_003_verifyForgotPassword()
-	{
-		List<ArrayList<String>> data=ExcelUtility.excelDataReader("ResetPage");
-		String expInvalidMessage=data.get(1).get(0);
-		
-		
-		login=new LoginPage(driver);
-		reset=login.clickForgotPassword();
-		String invalidEmail=RandomUtility.getRandomEmail();
+
+	@Test(priority = 1, enabled = true, description = "TC_003_verifyForgotPassword", groups = { "Regression" })
+	public void TC_003_verifyForgotPassword() {
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("ResetPage");
+		String expInvalidMessage = data.get(1).get(0);
+		login = new LoginPage(driver);
+		reset = login.clickForgotPassword();
+		String invalidEmail = RandomUtility.getRandomEmail();
 		reset.enterInvalidEmail(invalidEmail);
 		reset.resetButtonClick();
-		String actInvalidMessage=reset.getInvalidResetMessage();
+		String actInvalidMessage = reset.getInvalidResetMessage();
 		Assert.assertEquals(actInvalidMessage, expInvalidMessage, ErrorMessages.INVALID_ERROR_MESSAGE_FOUND);
 	}
-	
+
 }

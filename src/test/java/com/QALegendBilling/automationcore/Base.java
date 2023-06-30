@@ -49,6 +49,7 @@ public class Base {
 //    }
 
 	@BeforeMethod(alwaysRun = true)
+	   @Parameters({"browser"})
 	public void setUP() {
 		String browser = prop.getProperty("browser");
 		String url = prop.getProperty("url");
@@ -63,7 +64,7 @@ public class Base {
 			File screenshot = takeScreenshot.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshot, new File("./Screenshots/" + result.getName() + ".png"));
 		}
-		//driver.quit();
+		driver.quit();
 	}
 
 	@BeforeSuite

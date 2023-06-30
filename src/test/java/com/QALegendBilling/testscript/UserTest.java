@@ -20,19 +20,14 @@ import com.QALegendBilling.utilities.ExcelUtility;
 import com.QALegendBilling.utilities.TableUtility;
 import com.aventstack.extentreports.ExtentTest;
 
-
-
-public class UserTest extends Base
-{
+public class UserTest extends Base {
 	UserPage user;
 	HomePage home;
 	LoginPage login;
 	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
-	
-	
-	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
-	public void TC_006_verifyAddUser(String username, String Password)
-	{
+
+	@Test(priority = 1, enabled = true, description = "TC_006_verifyAddUser", groups = { "Regression" }, dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+	public void TC_006_verifyAddUser(String username, String Password) {
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String ExpUserLoginName = data.get(1).get(2);
 		String Exptitle = data.get(1).get(4);
@@ -41,7 +36,7 @@ public class UserTest extends Base
 		home = login.clickOnLoginButton();
 		String actUsername = home.getLoginUserName();
 		home.clickEndTourButton();
-		Assert.assertEquals(actUsername, ExpUserLoginName,ErrorMessages.INVALID_LOGIN_MESSAGE);
+		Assert.assertEquals(actUsername, ExpUserLoginName, ErrorMessages.INVALID_LOGIN_MESSAGE);
 		home.clickuserManagementDropdownbutton();
 		home.clickUserButton();
 		user = new UserPage(driver);
@@ -54,20 +49,20 @@ public class UserTest extends Base
 		user.enterUserPassword();
 		user.enterConfirmPassword();
 		List<ArrayList<String>> data1 = ExcelUtility.excelDataReader("UserPageData");
-		String prefix=data1.get(0).get(0);
-		String salesCom=data1.get(1).get(0);
+		String prefix = data1.get(0).get(0);
+		String salesCom = data1.get(1).get(0);
 		user.enterTitle(prefix);
 		user.enterCommission(salesCom);
 		user.clickSaveButton();
 		user.searchUser();
-		String ExpUseremail=user.email;
-		System.out.println(ExpUseremail);	
-		String actemail=user.getEmailID();
-		Assert.assertEquals(actemail, ExpUseremail,ErrorMessages.USER_NOT_FOUND_MESSAGE);
+		String ExpUseremail = user.email;
+		System.out.println(ExpUseremail);
+		String actemail = user.getEmailID();
+		Assert.assertEquals(actemail, ExpUseremail, ErrorMessages.USER_NOT_FOUND_MESSAGE);
 	}
-	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
-	public void TC_007_verifyInvalidUserSearch(String username, String Password)
-	{
+
+	@Test(priority = 1, enabled = true, description = "TC_007_verifyInvalidUserSearch", groups = { "Smoke" }, dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+	public void TC_007_verifyInvalidUserSearch(String username, String Password) {
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String ExpUserLoginName = data.get(1).get(2);
 		String Exptitle = data.get(1).get(4);
@@ -76,23 +71,20 @@ public class UserTest extends Base
 		home = login.clickOnLoginButton();
 		String actUsername = home.getLoginUserName();
 		home.clickEndTourButton();
-		Assert.assertEquals(actUsername, ExpUserLoginName,ErrorMessages.INVALID_LOGIN_MESSAGE);
+		Assert.assertEquals(actUsername, ExpUserLoginName, ErrorMessages.INVALID_LOGIN_MESSAGE);
 		home.clickuserManagementDropdownbutton();
 		home.clickUserButton();
 		user = new UserPage(driver);
 		user.searchInvalidUser();
-		//String actinvlaidMsg=user.getInvalidUserMessage();
 		List<ArrayList<String>> data1 = ExcelUtility.excelDataReader("UserPageData");
-		String expMsg=data1.get(2).get(0);
+		String expMsg = data1.get(2).get(0);
 		System.out.println(expMsg);
-		//Assert.assertEquals(actinvlaidMsg, expMsg, ErrorMessages.INVALID_USER_MESSAGE_NOT_FOUND);
-		//td[@class='dataTables_empty']
-		String actMsg=user.getInvalidSearchText();
+		String actMsg = user.getInvalidSearchText();
 		Assert.assertEquals(actMsg, expMsg, ErrorMessages.INVALID_USER_MESSAGE_NOT_FOUND);
 	}
-	@Test(dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
-	public void TC_008_verifyNewlyAddedUserLogin(String username, String Password) throws InterruptedException
-	{
+
+	@Test(priority = 1, enabled = true, description = "TC_008_verifyNewlyAddedUserLogin", groups = { "Regression" }, dataProvider = "ValidUserCredentials", dataProviderClass = DataProviders.class)
+	public void TC_008_verifyNewlyAddedUserLogin(String username, String Password) throws InterruptedException {
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String ExpUserLoginName = data.get(1).get(2);
 		String Exptitle = data.get(1).get(4);
@@ -101,7 +93,7 @@ public class UserTest extends Base
 		home = login.clickOnLoginButton();
 		String actUsername = home.getLoginUserName();
 		home.clickEndTourButton();
-		Assert.assertEquals(actUsername, ExpUserLoginName,ErrorMessages.INVALID_LOGIN_MESSAGE);
+		Assert.assertEquals(actUsername, ExpUserLoginName, ErrorMessages.INVALID_LOGIN_MESSAGE);
 		home.clickuserManagementDropdownbutton();
 		home.clickUserButton();
 		user = new UserPage(driver);
@@ -114,23 +106,20 @@ public class UserTest extends Base
 		user.enterUserPassword();
 		user.enterConfirmPassword();
 		List<ArrayList<String>> data1 = ExcelUtility.excelDataReader("UserPageData");
-		String prefix=data1.get(0).get(0);
-		String salesCom=data1.get(1).get(0);
+		String prefix = data1.get(0).get(0);
+		String salesCom = data1.get(1).get(0);
 		user.enterTitle(prefix);
 		user.enterCommission(salesCom);
 		user.clickSaveButton();
-		
 		Thread.sleep(15000);
 		user.userProfileclick();
 		user.userProfileLogout();
-		
-		String newUname=user.newLoginUserName();
-		String newPWord=user.newLoginUserPword();
+		String newUname = user.newLoginUserName();
+		String newPWord = user.newLoginUserPword();
 		login.enterUserCredentials(newUname, newPWord);
 		login.clickOnLoginButton();
-		String actNewUsername=home.getLoginUserName();
-		String ExpNewUsername=user.newLoginName();
-		Assert.assertEquals(actNewUsername, ExpNewUsername,com.QALegendBilling.constants.ErrorMessages.INVALID_LOGIN_MESSAGE);
-	
+		String actNewUsername = home.getLoginUserName();
+		String ExpNewUsername = user.newLoginName();
+		Assert.assertEquals(actNewUsername, ExpNewUsername,ErrorMessages.INVALID_LOGIN_MESSAGE);
 	}
 }

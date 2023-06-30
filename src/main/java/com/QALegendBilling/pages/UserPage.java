@@ -7,183 +7,159 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.QALegendBilling.utilities.TestHelperUtility;
 
-public class UserPage extends TestHelperUtility
-{
+public class UserPage extends TestHelperUtility {
 	public WebDriver driver;
 
 	public UserPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	private final String _addUserButton = "//a[@class='btn btn-block btn-primary']";
 	@FindBy(xpath = _addUserButton)
 	private WebElement addUserButton;
-	
+
 	private final String _titleField = "surname";
 	@FindBy(id = _titleField)
 	private WebElement titleField;
-	
+
 	private final String _firstNameField = "first_name";
 	@FindBy(id = _firstNameField)
 	private WebElement firstNameField;
-	
+
 	private final String _lastNameField = "last_name";
 	@FindBy(id = _lastNameField)
 	private WebElement lastNameField;
-	
+
 	private final String _emailField = "email";
 	@FindBy(id = _emailField)
 	private WebElement emailField;
-	
+
 	private final String _userNameField = "username";
 	@FindBy(id = _userNameField)
 	private WebElement userNameField;
-	
+
 	private final String _userPasswordField = "password";
 	@FindBy(id = _userPasswordField)
 	private WebElement userPasswordField;
-	
+
 	private final String _userConfirmPasswordField = "confirm_password";
 	@FindBy(id = _userConfirmPasswordField)
 	private WebElement userConfirmPasswordField;
-	
+
 	private final String _userSalesCommissionField = "cmmsn_percent";
 	@FindBy(id = _userSalesCommissionField)
 	private WebElement userSalesCommissionField;
-	
+
 	private final String _saveButton = "submit_user_button";
 	@FindBy(id = _saveButton)
 	private WebElement saveButton;
-	
+
 	private final String _searchUserField = "//input[@class='form-control input-sm']";
 	@FindBy(xpath = _searchUserField)
 	private WebElement searchUserField;
 
-	
 	private final String _invalidSearchText = "//td[@class='dataTables_empty']";
 	@FindBy(xpath = _invalidSearchText)
 	private WebElement invalidSearchText;
-	
+
 	private final String _userEmailID = "//table[@id=\"users_table\"]//tbody//tr//td[4]";
 	@FindBy(xpath = _userEmailID)
 	private WebElement userEmailID;
-	
+
 	private final String _userProfileButton = "//a[@class='dropdown-toggle']";
 	@FindBy(xpath = _userProfileButton)
 	private WebElement userProfileButton;
-	
+
 	private final String _userLogoutButton = "//div[@class='pull-right']//a[@class='btn btn-default btn-flat']";
 	@FindBy(xpath = _userLogoutButton)
 	private WebElement userLogoutButton;
-	
-	
-	
-	public String fname=random.getfName();
-	public String lname=random.getlName();
-	public String email=random.getRandomEmail();
-	
-	
-	public void clickUserAddButton()
-	{
+
+	public String fname = random.getfName();
+	public String lname = random.getlName();
+	public String email = random.getRandomEmail();
+
+	public void clickUserAddButton() {
 		addUserButton.click();
 	}
-	
-	public void enterTitle(String title)
-	{
+
+	public void enterTitle(String title) {
 		page.enterText(titleField, title);
 	}
-	
-	public void enterCommission(String commission)
-	{
+
+	public void enterCommission(String commission) {
 		page.enterText(userSalesCommissionField, commission);
 	}
-	
-	public void enterFirstName()
-	{
+
+	public void enterFirstName() {
 		page.enterText(firstNameField, fname);
 	}
-	
-	public void enterLastName()
-	{
+
+	public void enterLastName() {
 		page.enterText(lastNameField, lname);
 	}
-	
-	public void enterUserEmail()
-	{
+
+	public void enterUserEmail() {
 		page.enterText(emailField, email);
-		
+
 	}
-	
-	public void enterUserName()
-	{
-		page.enterText(userNameField, fname+lname);
+
+	public void enterUserName() {
+		page.enterText(userNameField, fname + lname);
 	}
-	
-	public void enterUserPassword()
-	{
-		page.enterText(userPasswordField, fname+123);
+
+	public void enterUserPassword() {
+		page.enterText(userPasswordField, fname + 123);
 	}
-	
-	public void enterConfirmPassword()
-	{
-		page.enterText(userConfirmPasswordField, fname+123);
+
+	public void enterConfirmPassword() {
+		page.enterText(userConfirmPasswordField, fname + 123);
 	}
-	
-	public void clickSaveButton()
-	{
+
+	public void clickSaveButton() {
 		saveButton.click();
 	}
-	
-	public void searchUser()
-	{
-		page.enterText(searchUserField, fname+lname);
+
+	public void searchUser() {
+		page.enterText(searchUserField, fname + lname);
 	}
-	
-	public void searchInvalidUser()
-	{
-		String invaliduserfname=random.getfName();
-		String invaliduserlname=random.getlName();
-		page.enterText(searchUserField, invaliduserfname+invaliduserlname);
+
+	public void searchInvalidUser() {
+		String invaliduserfname = random.getfName();
+		String invaliduserlname = random.getlName();
+		page.enterText(searchUserField, invaliduserfname + invaliduserlname);
 		wait.waitForElementToBeVisible(driver, invalidSearchText);
-		
+
 	}
-	
-	public String getInvalidSearchText()
-	{
-		String invalidtext=invalidSearchText.getText();
+
+	public String getInvalidSearchText() {
+		String invalidtext = invalidSearchText.getText();
 		return invalidtext;
-		
+
 	}
-	
-	public String getEmailID()
-	{
-		String uemail=userEmailID.getText();
+
+	public String getEmailID() {
+		String uemail = userEmailID.getText();
 		return uemail;
 	}
-	
-	public String newLoginUserName()
-	{
-		return fname+lname;
+
+	public String newLoginUserName() {
+		return fname + lname;
 	}
-	
-	public String newLoginUserPword()
-	{
-		return fname+123;
+
+	public String newLoginUserPword() {
+		return fname + 123;
 	}
-	
-	public String newLoginName()
-	{
-		return fname+" "+lname;
+
+	public String newLoginName() {
+		return fname + " " + lname;
 	}
-	
-	public void userProfileclick()
-	{
+
+	public void userProfileclick() {
 		userProfileButton.click();
 	}
-	
-	public void userProfileLogout()
-	{
+
+	public void userProfileLogout() {
 		userLogoutButton.click();
 	}
 
